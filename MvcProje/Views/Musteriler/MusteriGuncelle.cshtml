@@ -1,0 +1,22 @@
+﻿@model MvcProje.Models.Entitiy.TBLMusteri
+@{
+    ViewBag.Title = "MusteriGuncelle";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h3>Kategori Güncelle</h3>
+<br />
+<form class="form-group" method="post">
+    @Html.HiddenFor(x => x.MusteriId)
+    @Html.HiddenFor(x => x.MusteriId)
+    @Html.Label("Müşteri Adı")
+    <br />
+    @Html.TextBoxFor(x => x.MusteriAd, new { @class = "form-control" })
+    <br />
+    @Html.Label("Müşteri Soyadı")
+    <br />
+    @Html.TextBoxFor(x => x.MusteriSoyad, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>
+

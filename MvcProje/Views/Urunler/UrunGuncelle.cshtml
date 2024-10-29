@@ -1,0 +1,31 @@
+﻿@model MvcProje.Models.Entitiy.TBLUrunler
+@{
+    ViewBag.Title = "UrunGuncelle";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Ürün Güncelleme Sayfası</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.HiddenFor(x => x.UrunId)
+    @Html.HiddenFor(x => x.UrunId)
+    @Html.Label("Ürün Adı")
+    <br />
+    @Html.TextBoxFor(x => x.UrunAd, new { @class = "form-control" })
+    <br />
+    @Html.Label("Ürün Kategorisi")
+    @Html.DropDownListFor(m=>m.TBLKategoriler.KategoriId,(List<SelectListItem>)ViewBag.d, new { @class = "form-control" })
+    <br />
+    @Html.Label("Marka")
+    @Html.TextBoxFor(x => x.Marka, new { @class = "form-control" })
+    <br />
+    @Html.Label("Stok")
+    @Html.TextBoxFor(x => x.Stok, new { @class = "form-control" })
+    <br />
+    @Html.Label("Fiyat")
+    @Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>
+
+

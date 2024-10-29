@@ -1,0 +1,17 @@
+﻿@model MvcProje.Models.Entitiy.TBLKategoriler
+@{
+    ViewBag.Title = "KategoriEkle";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h3>Kategori Ekle</h3>
+<br />
+<form class="form-group" method="post">
+    @Html.Label("Kategori Adı")
+    <br />
+    @Html.TextBoxFor(x=>x.KategoriAd, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m=>m.KategoriAd,"Kategori Adını Doldurunuz.")
+    <br />
+    <button class="btn btn-info">Ekle</button>
+</form>
+

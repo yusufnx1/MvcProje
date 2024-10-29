@@ -1,0 +1,19 @@
+﻿@model MvcProje.Models.Entitiy.TBLMusteri
+@{
+    ViewBag.Title = "MusteriEkle";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h3>Müşteri Ekle</h3>
+<br />
+<form class="form-group" method="post">
+    @Html.Label("Müşteri Adı")
+    @Html.TextBoxFor(x => x.MusteriAd, new { @class = "form-control" })
+    <br />
+    @Html.Label("Müşteri Soyad")
+    @Html.TextBoxFor(x => x.MusteriSoyad, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Ekle</button>
+</form>
+
+
